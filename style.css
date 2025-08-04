@@ -1,113 +1,127 @@
-/* 📁 File: style.css – v2
-   Fixes layout spacing, font alignment, tabs, and improves styling */
+/* style.css */
 
-body {
+/* ===== Reset and Base Styles ===== */
+* {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  background-color: #f0fff4; /* mint cream */
-  color: #2f4f4f;
-  display: flex;
-  height: 100vh;
-  overflow: hidden;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+  background-color: #eaf7f0; /* Light pastel green */
+  color: #333;
+  display: flex;
+}
+
+/* ===== Sidebar ===== */
 .sidebar {
-  width: 280px;
-  background-color: #cce5d0; /* tea green */
-  padding: 2rem 1.5rem;
+  width: 260px;
+  background-color: #91c7a7; /* Darker pastel green */
+  color: white;
+  padding: 30px 20px;
   height: 100vh;
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
-  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: fixed;
 }
 
-.sidebar .profile-pic {
-  width: 180px;
-  height: auto;
-  border-radius: 12px;
-  border: 2px solid #558B6E;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1.5rem;
+.sidebar img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  border: 2px solid #5f9470;
 }
 
 .sidebar h1 {
-  font-size: 1.4rem;
-  margin: 0;
-  color: #2f4f4f;
+  font-size: 20px;
   text-align: center;
+  margin-bottom: 5px;
 }
 
 .sidebar p {
-  margin-top: 0.5rem;
-  font-weight: 600;
-  color: #4e6e58;
-  font-size: 1.05rem;
+  font-size: 14px;
   text-align: center;
+  color: #e3f8ee;
+  margin-bottom: 30px;
 }
 
-.sidebar nav {
-  margin-top: 2rem;
+.nav {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
-.sidebar nav a {
-  display: block;
-  padding: 0.6rem 1rem;
-  margin-bottom: 0.5rem;
-  color: #2f4f4f;
+.nav a {
+  color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.05rem;
-  border-radius: 6px;
+  width: 100%;
   text-align: center;
-  transition: all 0.2s ease;
+  padding: 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+  background-color: transparent;
 }
 
-.sidebar nav a:hover,
-.sidebar nav a.active {
-  background-color: #b4d3bb;
-  color: #2f4f4f;
+.nav a.active,
+.nav a:hover {
+  background-color: #5f9470; /* slightly darker */
 }
 
+/* ===== Main Content ===== */
 .main-content {
-  margin-left: 280px;
-  padding: 2rem;
-  flex: 1;
-  overflow-y: auto;
-  display: none;
-  max-height: 100vh;
-}
-
-.main-content.active {
-  display: block;
-}
-
-h2 {
-  border-bottom: 2px solid #b2d3c2;
-  padding-bottom: 0.3rem;
-  color: #2f4f4f;
+  margin-left: 260px;
+  padding: 40px;
+  width: calc(100% - 260px);
 }
 
 section {
-  margin-bottom: 2.5rem;
+  display: none;
 }
 
-ul {
-  padding-left: 1.5rem;
+section.active {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
-ul li {
-  margin-bottom: 0.8rem;
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #3b6b4e;
+}
+
+p {
+  font-size: 16px;
   line-height: 1.6;
 }
 
-a {
-  color: #7fb77e;
-  text-decoration: none;
+/* ===== Keyframes ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-a:hover {
-  text-decoration: underline;
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+  }
 }
