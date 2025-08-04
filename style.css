@@ -1,5 +1,5 @@
-/* 📁 File: style.css
-   Pastel Green Theme for Shivali's Portfolio Website – Updated with layout improvements and navigation */
+/* 📁 File: style.css – v2
+   Fixes layout spacing, font alignment, tabs, and improves styling */
 
 body {
   margin: 0;
@@ -7,70 +7,77 @@ body {
   background-color: #f0fff4; /* mint cream */
   color: #2f4f4f;
   display: flex;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .sidebar {
   width: 280px;
   background-color: #cce5d0; /* tea green */
-  padding: 2rem;
+  padding: 2rem 1.5rem;
   height: 100vh;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
   position: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
 }
 
 .sidebar .profile-pic {
-  width: 100%;
+  width: 180px;
+  height: auto;
   border-radius: 12px;
-  margin-bottom: 1rem;
-  border: 2px solid #558B6E; /* dark green outline */
+  border: 2px solid #558B6E;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
 }
 
 .sidebar h1 {
-  font-size: 1.8rem;
-  margin-bottom: 0.3rem;
+  font-size: 1.4rem;
+  margin: 0;
   color: #2f4f4f;
+  text-align: center;
 }
 
 .sidebar p {
-  margin-top: 0;
+  margin-top: 0.5rem;
   font-weight: 600;
   color: #4e6e58;
-  font-size: 1.1rem;
-}
-
-.sidebar .socials a {
-  margin-right: 10px;
-  text-decoration: none;
-  font-size: 1.2rem;
-  color: #2f4f4f;
+  font-size: 1.05rem;
+  text-align: center;
 }
 
 .sidebar nav {
   margin-top: 2rem;
+  width: 100%;
 }
 
 .sidebar nav a {
   display: block;
-  margin-bottom: 1rem;
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.5rem;
   color: #2f4f4f;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.1rem;
-  transition: all 0.2s;
+  font-size: 1.05rem;
+  border-radius: 6px;
+  text-align: center;
+  transition: all 0.2s ease;
 }
 
-.sidebar nav a:hover {
-  color: #558B6E;
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  background-color: #b4d3bb;
+  color: #2f4f4f;
 }
 
 .main-content {
-  margin-left: 300px;
+  margin-left: 280px;
   padding: 2rem;
   flex: 1;
+  overflow-y: auto;
   display: none;
+  max-height: 100vh;
 }
 
 .main-content.active {
@@ -103,8 +110,4 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-.email-icon, .gh-icon {
-  display: none; /* removed unnecessary labels */
 }
