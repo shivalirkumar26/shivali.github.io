@@ -1,44 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shivali Ravindra Kumar – Data Analyst Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p1JvTZ+tVrTfFJpq0j0IqHaSRJLDcdKiU1PLnDuxhCQhEKq4tcYHqKMoLj1zMy7kMzM3McM3cR9+HnW/dc3V3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <title>Shivali Ravindra Kumar</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <div class="container">
     <div class="sidebar">
-      <div class="sidebar-inner">
-        <img src="photo.jpg" alt="Profile Photo" class="profile-pic" />
-        <nav>
-          <a href="#home" class="active">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#resume">Resume</a>
-        </nav>
-      </div>
+      <img src="photo.jpg" alt="Shivali Ravindra Kumar">
+      <nav>
+        <ul>
+          <li><a href="#home" class="nav-link active" onclick="showTab('home')">About</a></li>
+          <li><a href="#projects" class="nav-link" onclick="showTab('projects')">Projects</a></li>
+          <li><a href="#resume" class="nav-link" onclick="showTab('resume')">Resume</a></li>
+        </ul>
+      </nav>
     </div>
-
     <div class="main-content">
-      <section id="home">
+      <section id="home" class="tab-content">
         <h1>Shivali Ravindra Kumar</h1>
-        <h2>Senior Data Analyst</h2>
-        <p>
-          I’m a passionate data analyst with a strong background in statistical analysis and data visualization. I love turning data into actionable insights that drive strategic decision-making. I enjoy solving business problems using tools like SQL, Power BI, and Python.
+        <h3>Senior Data Analyst</h3>
+        <p>📍 Esslingen am Neckar, Germany<br>
+           📞 +49 172 8768128<br>
+           ✉️ <a href="mailto:shivali.ravindrakumar@gmail.com">shivali.ravindrakumar@gmail.com</a><br>
+           <a href="https://www.linkedin.com/in/shivalirkumar" target="_blank">LinkedIn</a> | 
+           <a href="https://github.com/shivalirkumar26" target="_blank">GitHub</a>
         </p>
-        <p><strong>Location:</strong> Esslingen am Neckar, Germany<br>
-           <strong>Phone:</strong> +49 172 8768128<br>
-           <strong>Email:</strong> shivali.ravindrakumar@gmail.com</p>
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/in/shivalirkumar" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/shivalirkumar26" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        </div>
+        <p>I am a passionate data analyst with a strong background in statistical analysis and data visualization. 
+        I love turning data into actionable insights that drive strategic decision-making.</p>
       </section>
 
-      <section id="projects">
+      <section id="projects" class="tab-content" style="display: none;">
         <h2>Projects</h2>
         <ul>
           <li><strong>Sales Dashboard</strong> – Built using Power BI to visualize regional trends and monthly performance.</li>
@@ -47,11 +40,26 @@
         </ul>
       </section>
 
-      <section id="resume">
+      <section id="resume" class="tab-content" style="display: none;">
         <h2>Resume</h2>
-        <p><a href="Shivali_Ravindra_Kumar_Resume.pdf" download>Download My Resume (PDF)</a></p>
+        <p><a href="Shivali_Ravindra_Kumar_Resume.pdf" target="_blank">Download My Resume (PDF)</a></p>
       </section>
     </div>
   </div>
+
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll(".tab-content");
+      tabs.forEach(tab => tab.style.display = "none");
+
+      document.getElementById(tabId).style.display = "block";
+
+      const links = document.querySelectorAll(".nav-link");
+      links.forEach(link => link.classList.remove("active"));
+
+      const activeLink = Array.from(links).find(link => link.getAttribute("href") === "#" + tabId);
+      if (activeLink) activeLink.classList.add("active");
+    }
+  </script>
 </body>
 </html>
