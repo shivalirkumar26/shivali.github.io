@@ -1,6 +1,5 @@
 /* 📁 File: style.css
-   Pastel Green Theme for Shivali's Portfolio Website
-*/
+   Pastel Green Theme for Shivali's Portfolio Website – Updated with layout improvements and navigation */
 
 body {
   margin: 0;
@@ -17,24 +16,29 @@ body {
   height: 100vh;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .sidebar .profile-pic {
   width: 100%;
   border-radius: 12px;
   margin-bottom: 1rem;
+  border: 2px solid #558B6E; /* dark green outline */
 }
 
 .sidebar h1 {
-  font-size: 1.5rem;
-  margin-bottom: 0.2rem;
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
   color: #2f4f4f;
 }
 
 .sidebar p {
   margin-top: 0;
   font-weight: 600;
-  color: #7fb77e;
+  color: #4e6e58;
+  font-size: 1.1rem;
 }
 
 .sidebar .socials a {
@@ -44,10 +48,33 @@ body {
   color: #2f4f4f;
 }
 
+.sidebar nav {
+  margin-top: 2rem;
+}
+
+.sidebar nav a {
+  display: block;
+  margin-bottom: 1rem;
+  color: #2f4f4f;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.2s;
+}
+
+.sidebar nav a:hover {
+  color: #558B6E;
+}
+
 .main-content {
-  margin-left: 280px;
+  margin-left: 300px;
   padding: 2rem;
   flex: 1;
+  display: none;
+}
+
+.main-content.active {
+  display: block;
 }
 
 h2 {
@@ -76,4 +103,8 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+.email-icon, .gh-icon {
+  display: none; /* removed unnecessary labels */
 }
