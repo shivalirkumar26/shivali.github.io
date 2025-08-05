@@ -145,8 +145,12 @@ body {
   padding: 40px 80px;
 }
 
+/* Center all active tab content vertically unless overridden */
 .tab-content.active-tab {
   display: flex;
+  flex-direction: column;
+  justify-content: center;    /* Vertically center */
+  align-items: flex-start;    /* Horizontally left align */
 }
 
 /* ========== ABOUT SECTION ========== */
