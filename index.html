@@ -5,10 +5,7 @@
   <title>Shivali Ravindra Kumar</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
@@ -25,51 +22,52 @@
         </ul>
       </nav>
     </div>
+
     <div class="main-content">
-    <section id="home" class="tab-content">
-  <div class="home-content">
-    <h1>WELCOME!</h1>
-    <p class="intro-text">
-      I’m Shivali, a data professional with a curious mind and a love for meaningful work.<br><br>
-      Over the last four years, I’ve worked on turning numbers into narratives — helping teams make informed, confident decisions.<br><br>
-      Beyond analytics, I enjoy building tools, streamlining workflows, and solving real problems with simple, elegant solutions.<br><br>
-      This portfolio brings together my experiences, projects, and a glimpse into how I think.
-    </p>
-  </div>
-</section>
-
-<section id="about" class="tab-content">
-  <div class="about-wrapper">
-    <h1><span class="highlight">SHIVALI</span> RAVINDRA KUMAR</h1>
-    <p><i class="fas fa-map-marker-alt icon-green"></i> Esslingen am Neckar, Germany</p>
-    <p><i class="fas fa-phone icon-green"></i> +49 172 8768128</p>
-    <p><i class="fas fa-envelope icon-green"></i> 
-      <a href="mailto:shivali.ravindrakumar@gmail.com" class="email-green">shivali.ravindrakumar@gmail.com</a>
-    </p>
-    <p><strong>&lt;PLACE ABOUT TEXT HERE...&gt;</strong></p>
-    <div class="social-icons about-icons">
-  <a href="https://www.linkedin.com/in/shivali-r-kumar" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-  <a href="https://github.com/shivalirkumar26" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-</div>
-  </div>
-</section>
-
-      <section id="timeline" class="tab-content content" style="display: none;">
-        <div class="content-wrapper">
-        <!-- Timeline content -->
+      <section id="home" class="tab-content">
+        <div class="home-content">
+          <h1>WELCOME!</h1>
+          <p class="intro-text">
+            I’m Shivali, a data professional with a curious mind and a love for meaningful work.<br><br>
+            Over the last four years, I’ve worked on turning numbers into narratives — helping teams make informed, confident decisions.<br><br>
+            Beyond analytics, I enjoy building tools, streamlining workflows, and solving real problems with simple, elegant solutions.<br><br>
+            This portfolio brings together my experiences, projects, and a glimpse into how I think.
+          </p>
         </div>
       </section>
 
-      <section id="projects" class="tab-content content" style="display: none;">
-        <div class="content-wrapper">
-        <!-- Projects content -->
+      <section id="about" class="tab-content">
+        <div class="about-wrapper">
+          <h1><span class="highlight">SHIVALI</span> RAVINDRA KUMAR</h1>
+          <p><i class="fas fa-map-marker-alt icon-green"></i> Esslingen am Neckar, Germany</p>
+          <p><i class="fas fa-phone icon-green"></i> +49 172 8768128</p>
+          <p><i class="fas fa-envelope icon-green"></i> 
+            <a href="mailto:shivali.ravindrakumar@gmail.com" class="email-green">shivali.ravindrakumar@gmail.com</a>
+          </p>
+          <p><strong>&lt;PLACE ABOUT TEXT HERE...&gt;</strong></p>
+          <div class="social-icons about-icons">
+            <a href="https://www.linkedin.com/in/shivali-r-kumar" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/shivalirkumar26" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          </div>
         </div>
       </section>
 
-      <section id="resume" class="tab-content content" style="display: none;">
+      <section id="timeline" class="tab-content">
         <div class="content-wrapper">
-        <h2>Resume</h2>
-        <p><a href="Shivali_Ravindra_Kumar_Resume.pdf" target="_blank">Download My Resume (PDF)</a></p>
+          <!-- Timeline content -->
+        </div>
+      </section>
+
+      <section id="projects" class="tab-content">
+        <div class="content-wrapper">
+          <!-- Projects content -->
+        </div>
+      </section>
+
+      <section id="resume" class="tab-content">
+        <div class="content-wrapper">
+          <h2>Resume</h2>
+          <p><a href="Shivali_Ravindra_Kumar_Resume.pdf" target="_blank">Download My Resume (PDF)</a></p>
         </div>
       </section>
     </div>
@@ -78,77 +76,32 @@
   <script>
     function showTab(tabId) {
       const tabs = document.querySelectorAll(".tab-content");
-      tabs.forEach(tab => tab.style.display = "none");
+      tabs.forEach(tab => {
+        tab.classList.remove("active-tab");
+        tab.style.justifyContent = "";
+        tab.style.alignItems = "";
+      });
 
-      document.getElementById(tabId).style.display = "block";
+      const activeTab = document.getElementById(tabId);
+      activeTab.classList.add("active-tab");
+
+      if (tabId === "home") {
+        activeTab.style.justifyContent = "center";
+        activeTab.style.alignItems = "center";
+      } else {
+        activeTab.style.justifyContent = "center";
+        activeTab.style.alignItems = "flex-start";
+      }
 
       const links = document.querySelectorAll(".nav-link");
       links.forEach(link => link.classList.remove("active"));
-
       const activeLink = Array.from(links).find(link => link.getAttribute("href") === "#" + tabId);
       if (activeLink) activeLink.classList.add("active");
-
-      const homeSection = document.getElementById("home");
-      if (tabId === "home") {
-        homeSection.classList.add("show-bg");
-      } else {
-        homeSection.classList.remove("show-bg");
-      }
     }
-  </script>
-  <script>
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const targetId = link.getAttribute('href').substring(1);
 
-      // Hide all tabs
-      document.querySelectorAll('.tab-content').forEach(tab => {
-        tab.style.display = 'none';
-      });
-
-      // Show selected tab
-      const targetTab = document.getElementById(targetId);
-      if (targetTab) {
-        targetTab.style.display = 'block';
-      }
-
-      // Update active link
-      document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-      link.classList.add('active');
+    window.addEventListener("DOMContentLoaded", () => {
+      showTab("home");
     });
-  });
-</script>
-    <!-- Other HTML content above -->
-
- <script>
-  function showTab(tabId) {
-  const tabs = document.querySelectorAll(".tab-content");
-  tabs.forEach(tab => {
-    tab.classList.remove("active-tab");
-  });
-
-  const activeTab = document.getElementById(tabId);
-  activeTab.classList.add("active-tab");
-
-  const links = document.querySelectorAll(".nav-link");
-  links.forEach(link => link.classList.remove("active"));
-
-  const activeLink = Array.from(links).find(link => link.getAttribute("href") === "#" + tabId);
-  if (activeLink) activeLink.classList.add("active");
-
-  if (tabId === "home") {
-    activeTab.style.alignItems = "center";        // horizontally center
-    activeTab.style.justifyContent = "center";    // vertically center
-  } else {
-    activeTab.style.alignItems = "flex-start";    // horizontally left
-    activeTab.style.justifyContent = "center";    // vertically center
-  }
-}
-
-  window.addEventListener("DOMContentLoaded", () => {
-    showTab("home");
-  });
-</script>
+  </script>
 </body>
 </html>
