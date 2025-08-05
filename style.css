@@ -63,22 +63,21 @@ body {
 
 .main-content {
   flex: 1;
-  width: 100%;
   padding: 0;
   margin: 0;
-  overflow-y: auto;
+  width: 100%;
 }
 
 /* Home tab background */
 #home {
   background-image: url('background.jpg');
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-attachment: scroll;
-  padding: 80px 40px;
+  width: 100vw; /* Force full viewport width */
   height: 100vh;
-  width: 100%;
+  padding: 80px 40px;
   box-sizing: border-box;
   position: relative;
   display: flex;
@@ -103,6 +102,11 @@ body {
 #home > * {
   position: relative;
   z-index: 1;
+}
+
+.home-content {
+  text-align: center;
+  animation: fadeInUp 1s ease;
 }
 
 /* All tabs default */
@@ -168,6 +172,17 @@ ul {
   from {
     opacity: 0;
     transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
