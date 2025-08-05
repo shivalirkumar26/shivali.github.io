@@ -229,13 +229,17 @@ h3 {
 
 /* Timeline Styles */
 .timeline {
-  position: relative;
-  width: 100%;
-  margin: 60px auto 40px;
-  padding: 0 20px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: space-between; /* ← spreads the items evenly */
+  align-items: center;
+  position: relative;
+  margin-top: 60px;
+  padding-top: 50px;
+  border-top: 3px solid #4e8b5b;
+  width: 100%;
+  max-width: 1000px; /* You can increase this if needed */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .timeline::before {
@@ -250,10 +254,9 @@ h3 {
 }
 
 .timeline-point {
-  position: relative;
   text-align: center;
-  width: 20%;
-  z-index: 1;
+  position: relative;
+  flex: 1; /* ← important: allows items to stretch evenly */
 }
 
 .timeline-point .circle {
