@@ -149,13 +149,13 @@ body {
 /* ========== ABOUT SECTION ========== */
 #about {
   display: flex;
-  flex-direction: column;          /* Stack items vertically */
-  justify-content: center;         /* Vertically center */
-  align-items: flex-start;         /* Keep left alignment */
-  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;      /* Vertically center */
+  align-items: flex-start;      /* Keep left-aligned */
+  height: 100vh;                /* Full height for vertical centering */
   padding: 0 80px;
-  background-color: #edf6ec;
   box-sizing: border-box;
+  background-color: #edf6ec;
   font-size: 1.1rem;
 }
 
