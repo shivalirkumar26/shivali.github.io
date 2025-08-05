@@ -71,19 +71,17 @@ body {
 /* Home tab background */
 #home {
   background-image: url('background.jpg');
-  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: scroll;
-  width: 100vw; /* Force full viewport width */
+  width: 100vw;
   height: 100vh;
-  padding: 80px 40px;
+  padding: 0;
   box-sizing: border-box;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
+  position: relative;
 }
 
 /* Optional: subtle white overlay for readability */
