@@ -69,7 +69,8 @@ body {
 .main-content {
   flex: 1;
   position: relative;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: auto;
 }
 
 /* ========== TABS GENERAL ========== */
@@ -137,9 +138,9 @@ body {
 
 /* ========== ABOUT SECTION ========== */
 .about-wrapper {
-  max-width: 800px;
+  max-width: 1200px;
   width: 100%;
-  margin-top: 5vh; /* shift content downward slightly */
+  margin: 5vh auto 0 auto; /* center it horizontally */
 }
 
 #about h1 {
