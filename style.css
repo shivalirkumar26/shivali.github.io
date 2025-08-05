@@ -148,15 +148,16 @@ body {
 
 /* ========== ABOUT SECTION ========== */
 #about {
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;      /* Vertically center */
-  align-items: flex-start;      /* Keep left-aligned */
-  height: 100vh;                /* Full height for vertical centering */
-  padding: 0 80px;
+  justify-content: center;       /* vertically center */
+  align-items: flex-start;       /* left-align content */
+  padding-left: 80px;
+  padding-right: 80px;
   box-sizing: border-box;
   background-color: #edf6ec;
   font-size: 1.1rem;
+  flex-direction: column;
 }
 
 #about .content-wrapper {
