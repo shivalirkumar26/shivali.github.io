@@ -121,7 +121,7 @@
 </script>
     <!-- Other HTML content above -->
 
-  <script>
+ <script>
   function showTab(tabId) {
     const tabs = document.querySelectorAll(".tab-content");
 
@@ -144,7 +144,6 @@
       activeTab.style.alignItems = "flex-start";
     }
 
-    // Update nav link highlight
     const links = document.querySelectorAll(".nav-link");
     links.forEach(link => link.classList.remove("active"));
 
@@ -152,15 +151,8 @@
     if (activeLink) activeLink.classList.add("active");
   }
 
-  // Initial tab load
   window.addEventListener("DOMContentLoaded", () => {
     showTab("home");
-  });
-</script>
-
-  <script>
-  window.addEventListener('DOMContentLoaded', () => {
-    showTab('home'); // Load home on initial render
   });
 </script>
 </body>
