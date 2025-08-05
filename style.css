@@ -229,34 +229,41 @@ h3 {
 
 /* Timeline Styles */
 .timeline {
-  display: flex;
-  justify-content: space-between; /* ← spreads the items evenly */
-  align-items: center;
   position: relative;
-  margin-top: 60px;
-  padding-top: 50px;
-  border-top: 3px solid #4e8b5b;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 40px;
   width: 100%;
-  max-width: 1000px; /* You can increase this if needed */
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 1000px;
+  margin: 60px auto 0 auto;
 }
 
-.timeline::before {
-  content: '';
+.timeline-line {
   position: absolute;
-  top: 32px; /* aligns with circles */
+  top: 35px; /* height of the circle */
   left: 0;
   right: 0;
-  height: 2px;
+  height: 3px;
   background-color: #4e8b5b;
-  z-index: 0;
+  z-index: 1;
 }
 
 .timeline-point {
   text-align: center;
   position: relative;
-  flex: 1; /* ← important: allows items to stretch evenly */
+  z-index: 2;
+  flex: 1;
+}
+
+.circle {
+  width: 16px;
+  height: 16px;
+  background-color: #4e8b5b;
+  border-radius: 50%;
+  margin: 0 auto 15px auto;
+  position: relative;
+  top: -25px; /* moves it up to overlap the line */
 }
 
 .timeline-point .circle {
