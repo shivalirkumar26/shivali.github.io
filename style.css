@@ -241,7 +241,7 @@ h3 {
 
 .timeline-line {
   position: absolute;
-  top: 18px;
+  top: 12px; /* Adjust this if needed */
   left: 0;
   right: 0;
   height: 3px;
@@ -262,9 +262,10 @@ h3 {
   background-color: #4e8b5b;
   border-radius: 50%;
   position: absolute;
-  top: 0;
+  top: 12px; /* Must match .timeline-line top */
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 2;
 }
 
 .timeline-point .role {
