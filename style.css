@@ -123,13 +123,29 @@ body {
 }
 
 /* Other Tabs */
+/* Base tab content styling: centered container but left-aligned text */
 .tab-content {
-  display: none;
-  padding: 40px;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* left align content */
+  justify-content: center; /* vertical centering */
+  min-height: 100vh;
+  padding: 60px 80px;
   box-sizing: border-box;
   background-color: #edf6ec;
-  overflow-y: auto;
+}
+
+/* Make it expand when there is more content */
+.tab-content > * {
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Home tab should remain center aligned */
+#home .home-content {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .tab-content:target {
