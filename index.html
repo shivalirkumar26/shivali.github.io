@@ -74,34 +74,29 @@
   </div>
 
   <script>
-    function showTab(tabId) {
-      const tabs = document.querySelectorAll(".tab-content");
-      tabs.forEach(tab => {
-        tab.classList.remove("active-tab");
-        tab.style.justifyContent = "";
-        tab.style.alignItems = "";
-      });
-
-      const activeTab = document.getElementById(tabId);
-      activeTab.classList.add("active-tab");
-
-      if (tabId === "home") {
-        activeTab.style.justifyContent = "center";
-        activeTab.style.alignItems = "center";
-      } else {
-        activeTab.style.justifyContent = "center";
-        activeTab.style.alignItems = "flex-start";
-      }
-
-      const links = document.querySelectorAll(".nav-link");
-      links.forEach(link => link.classList.remove("active"));
-      const activeLink = Array.from(links).find(link => link.getAttribute("href") === "#" + tabId);
-      if (activeLink) activeLink.classList.add("active");
-    }
-
-    window.addEventListener("DOMContentLoaded", () => {
-      showTab("home");
+  function showTab(tabId) {
+    const tabs = document.querySelectorAll(".tab-content");
+    tabs.forEach(tab => {
+      tab.style.display = "none";           // hide all
+      tab.classList.remove("active-tab");   // remove active styling
     });
-  </script>
+
+    const activeTab = document.getElementById(tabId);
+    activeTab.style.display = "flex";        // show this tab
+    activeTab.classList.add("active-tab");   // apply layout style
+
+    // Update active nav link
+    const links = document.querySelectorAll(".nav-link");
+    links.forEach(link => link.classList.remove("active"));
+
+    const activeLink = Array.from(links).find(link => link.getAttribute("href") === "#" + tabId);
+    if (activeLink) activeLink.classList.add("active");
+  }
+
+  // Set default tab on first load
+  window.addEventListener("DOMContentLoaded", () => {
+    showTab("home");
+  });
+</script>
 </body>
 </html>
