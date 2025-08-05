@@ -230,22 +230,18 @@ h3 {
 /* Timeline Styles */
 .timeline {
   position: relative;
-  margin-top: 60px;
-  padding: 30px 10px 10px 10px;
+  width: 100%;
+  max-width: 100%;
+  margin: 80px auto 40px;
+  padding: 20px 0 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 30px;
-  max-width: 100%;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  position: relative;
 }
 
-/* Horizontal line */
 .timeline-line {
   position: absolute;
-  top: 12px;
+  top: 25px; /* This allows circles to sit over the line */
   left: 0;
   right: 0;
   height: 2px;
@@ -253,13 +249,11 @@ h3 {
   z-index: 0;
 }
 
-/* Timeline points */
 .timeline-point {
   position: relative;
-  z-index: 1;
-  flex: 1;
-  min-width: 180px;
   text-align: center;
+  width: 20%;
+  z-index: 1;
 }
 
 .timeline-point .circle {
@@ -267,14 +261,14 @@ h3 {
   height: 14px;
   background-color: #4e8b5b;
   border-radius: 50%;
-  margin: 0 auto 12px auto;
+  margin: 0 auto;
   position: relative;
-  top: -6px;
+  top: 18px; /* This places it on top of the line */
 }
 
 .timeline-point .role {
   font-weight: 600;
-  margin: 0;
+  margin-top: 30px;
   font-size: 0.95rem;
 }
 
@@ -282,8 +276,9 @@ h3 {
   font-style: italic;
   color: #4e8b5b;
   font-weight: normal;
+  font-size: 0.9rem;
   display: block;
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
 .timeline-point .year {
