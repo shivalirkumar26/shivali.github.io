@@ -231,19 +231,19 @@ h3 {
 .timeline {
   position: relative;
   width: 100%;
-  max-width: 100%;
-  margin: 80px auto 40px;
-  padding: 0 60px;
+  margin: 60px auto 40px;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
-.timeline-line {
+.timeline::before {
+  content: '';
   position: absolute;
-  top: 32px; /* slightly higher than center of circle */
-  left: 60px;
-  right: 60px;
+  top: 32px; /* aligns with circles */
+  left: 0;
+  right: 0;
   height: 2px;
   background-color: #4e8b5b;
   z-index: 0;
@@ -252,7 +252,7 @@ h3 {
 .timeline-point {
   position: relative;
   text-align: center;
-  flex: 1;
+  width: 20%;
   z-index: 1;
 }
 
@@ -263,7 +263,7 @@ h3 {
   border-radius: 50%;
   margin: 0 auto;
   position: relative;
-  top: 24px; /* pushes circle downward to sit on the line */
+  top: 24px;
 }
 
 .timeline-point .role {
@@ -285,22 +285,4 @@ h3 {
   font-size: 0.85rem;
   color: #777;
   margin-top: 6px;
-}
-
-@media (max-width: 768px) {
-  .timeline {
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-  }
-
-  .timeline-line {
-    display: none; /* Or make it vertical if you want */
-  }
-
-  .timeline-point {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 30px;
-  }
 }
