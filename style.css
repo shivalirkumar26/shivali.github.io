@@ -72,7 +72,7 @@ body {
   overflow: hidden;
 }
 
-/* ========== TABS ========== */
+/* ========== TABS GENERAL ========== */
 .tab-content {
   display: none;
   background-color: #edf6ec;
@@ -85,33 +85,18 @@ body {
   display: flex;
 }
 
-/* ========== HOME SECTION ========== */
+/* Special Layouts */
 #home.active-tab {
   justify-content: center;
   align-items: center;
 }
 
-#home .home-content {
-  text-align: center;
-  max-width: 800px;
-  padding: 2rem;
-  animation: fadeIn 1.5s ease;
-  color: #000;
+#about.active-tab {
+  justify-content: center;     /* vertical centering */
+  align-items: flex-start;     /* horizontal left alignment */
 }
 
-#home h1 {
-  font-size: 2.5rem;
-  color: #4e8b5b;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.intro-text {
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-
+/* ========== HOME SECTION ========== */
 #home::before {
   content: "";
   position: absolute;
@@ -128,25 +113,32 @@ body {
   pointer-events: none;
 }
 
-/* ========== ABOUT SECTION ========== */
-#about.active-tab {
-  justify-content: center;
-  align-items: flex-start;
+#home .home-content {
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+  animation: fadeIn 1.5s ease;
+  color: #000;
+  z-index: 1;
 }
 
+#home h1 {
+  font-size: 2.5rem;
+  color: #4e8b5b;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* ========== ABOUT SECTION ========== */
 .about-wrapper {
   max-width: 800px;
   width: 100%;
-}
-
-#about.tab-content {
-  display: flex;
-  justify-content: center;   /* vertically center */
-  align-items: flex-start;   /* left align horizontally */
-  padding: 60px 80px;
-  background-color: #edf6ec;
-  min-height: 100vh;
-  box-sizing: border-box;
 }
 
 #about h1 {
@@ -190,7 +182,7 @@ body {
   color: #4e8b5b;
 }
 
-/* ========== GLOBAL ELEMENT STYLES ========== */
+/* ========== GLOBAL STYLES ========== */
 h3 {
   color: #446644;
   margin-bottom: 20px;
