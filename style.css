@@ -149,8 +149,9 @@ body {
 /* ========== ABOUT SECTION ========== */
 #about {
   display: flex;
-  align-items: center;          /* Vertical centering */
-  justify-content: flex-start;  /* Left alignment */
+  flex-direction: column;          /* Stack items vertically */
+  justify-content: center;         /* Vertically center */
+  align-items: flex-start;         /* Keep left alignment */
   min-height: 100vh;
   padding: 0 80px;
   background-color: #edf6ec;
