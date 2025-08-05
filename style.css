@@ -295,9 +295,9 @@ h3 {
 }
 
 .cert-badges img {
-  height: 180px;
-  width: auto;
-  transition: transform 0.3s ease;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
 }
 
 .cert-badges img:hover {
