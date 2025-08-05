@@ -102,6 +102,11 @@ html {
   justify-content: center;
   align-items: center;
   position: relative;
+
+  background-image: url('background.jpg');
+  background-size: 100% 100%; /* Stretch to cover both width & height */
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .home-content {
