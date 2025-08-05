@@ -284,3 +284,22 @@ h3 {
   color: gray;
   font-size: 0.9rem;
 }
+
+.cert-badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.cert-badges img {
+  height: 100px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.cert-badges img:hover {
+  transform: scale(1.05);
+}
