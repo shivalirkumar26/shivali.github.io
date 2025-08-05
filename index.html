@@ -2,38 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shivali Ravindra Kumar – Home</title>
+  <title>Shivali Ravindra Kumar</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container">
-    <aside class="sidebar">
-      <img src="photo.jpg" alt="Shivali Ravindra Kumar" class="sidebar-photo">
+    <div class="sidebar">
+      <img src="photo.jpg" alt="Shivali Ravindra Kumar">
       <nav>
         <ul>
-          <li><a href="#" class="active">HOME</a></li>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#timeline">TIMELINE</a></li>
-          <li><a href="#projects">PROJECTS</a></li>
-          <li><a href="#resume">RESUME</a></li>
+          <li><a href="#home" class="nav-link active" onclick="showTab('home')">HOME</a></li>
+          <li><a href="#about" class="nav-link" onclick="showTab('about')">ABOUT</a></li>
+          <li><a href="#timeline" class="nav-link" onclick="showTab('timeline')">TIMELINE</a></li>
+          <li><a href="#projects" class="nav-link" onclick="showTab('projects')">PROJECTS</a></li>
+          <li><a href="#resume" class="nav-link" onclick="showTab('resume')">RESUME</a></li>
         </ul>
       </nav>
-    </aside>
+    </div>
 
-    <main class="home-section">
-      <div class="intro-wrapper">
-        <div class="intro-text">
-          <h1>Welcome!</h1>
+    <div class="main-content">
+      <section id="home" class="tab-content content">
+        <div class="card">
+          <h2>WELCOME!</h2>
           <p>I’m Shivali, a data professional with a curious mind and a love for meaningful work.</p>
           <p>Over the last four years, I’ve worked on turning numbers into narratives — helping teams make informed, confident decisions.</p>
           <p>Beyond analytics, I enjoy building tools, streamlining workflows, and solving real problems with simple, elegant solutions.</p>
           <p>This portfolio brings together my experiences, projects, and a glimpse into how I think.</p>
         </div>
-      </div>
-    </main>
+      </section>
+
+      <!-- Placeholder for other tabs -->
+      <section id="about" class="tab-content content" style="display: none;"></section>
+      <section id="timeline" class="tab-content content" style="display: none;"></section>
+      <section id="projects" class="tab-content content" style="display: none;"></section>
+      <section id="resume" class="tab-content content" style="display: none;"></section>
+    </div>
   </div>
+
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll(".tab-content");
+      tabs.forEach(tab => tab.style.display = "none");
+
+      document.getElementById(tabId).style.display = "block";
+
+      const links = document.querySelectorAll(".nav-link");
+      links.forEach(link => link.classList.remove("active"));
+
+      const activeLink = Array.from(links).find(link => link.getAttribute("href") === "#" + tabId);
+      if (activeLink) activeLink.classList.add("active");
+    }
+  </script>
 </body>
 </html>
