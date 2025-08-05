@@ -160,8 +160,8 @@ body {
 }
 
 #about .content-wrapper {
-  max-width: 800px;
   width: 100%;
+  max-width: 800px;
 }
 
 #about h1 {
