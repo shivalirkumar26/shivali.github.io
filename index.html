@@ -23,35 +23,26 @@
     </div>
     <div class="main-content">
       <section id="home" class="tab-content content">
-        <h1 class="welcome animated-text">WELCOME!</h1>
-        <p class="intro-text animated-text">
-          I’m Shivali, a data professional with a curious mind and a love for meaningful work.
-          <br><br>
-          Over the last four years, I’ve worked on turning numbers into narratives — helping teams make informed, confident decisions.
-          <br><br>
-          Beyond analytics, I enjoy building tools, streamlining workflows, and solving real problems with simple, elegant solutions.
-          <br><br>
-          This portfolio brings together my experiences, projects, and a glimpse into how I think.
-        </p>
+        <div class="overlay"></div>
+        <div class="home-text">
+          <h1>WELCOME!</h1>
+          <p>I’m Shivali, a data professional with a curious mind and a love for meaningful work.</p>
+          <p>Over the last four years, I’ve worked on turning numbers into narratives — helping teams make informed, confident decisions.</p>
+          <p>Beyond analytics, I enjoy building tools, streamlining workflows, and solving real problems with simple, elegant solutions.</p>
+          <p>This portfolio brings together my experiences, projects, and a glimpse into how I think.</p>
+        </div>
       </section>
 
       <section id="about" class="tab-content content" style="display: none;">
-        <h2>About</h2>
-        <!-- About content goes here -->
+        <!-- About content -->
       </section>
 
       <section id="timeline" class="tab-content content" style="display: none;">
-        <h2>Timeline</h2>
-        <!-- Timeline content will be added here -->
+        <!-- Timeline content -->
       </section>
 
       <section id="projects" class="tab-content content" style="display: none;">
-        <h2>Projects</h2>
-        <ul>
-          <li><strong>Sales Dashboard</strong> – Built using Power BI to visualize regional trends and monthly performance.</li>
-          <li><strong>Churn Analysis</strong> – Conducted SQL + Python-based exploratory data analysis on customer behavior.</li>
-          <li><strong>Google Capstone Project</strong> – Wrangled bike-share data and communicated trends via visualization.</li>
-        </ul>
+        <!-- Projects content -->
       </section>
 
       <section id="resume" class="tab-content content" style="display: none;">
@@ -73,6 +64,13 @@
 
       const activeLink = Array.from(links).find(link => link.getAttribute("href") === "#" + tabId);
       if (activeLink) activeLink.classList.add("active");
+
+      const homeSection = document.getElementById("home");
+      if (tabId === "home") {
+        homeSection.classList.add("show-bg");
+      } else {
+        homeSection.classList.remove("show-bg");
+      }
     }
   </script>
 </body>
