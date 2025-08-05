@@ -229,56 +229,65 @@ h3 {
 
 /* Timeline Styles */
 .timeline {
+  position: relative;
+  margin-top: 60px;
+  padding: 30px 10px 10px 10px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 30px;
+  max-width: 100%;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   position: relative;
-  margin-top: 50px;
-  padding-top: 30px;
-  border-top: 2px solid #4e8b5b;
-  flex-wrap: wrap;
 }
 
-.timeline-item {
-  text-align: center;
+/* Horizontal line */
+.timeline-line {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #4e8b5b;
+  z-index: 0;
+}
+
+/* Timeline points */
+.timeline-point {
+  position: relative;
+  z-index: 1;
   flex: 1;
-  min-width: 150px;
-  position: relative;
+  min-width: 180px;
+  text-align: center;
 }
 
-.timeline-item .circle {
-  width: 12px;
-  height: 12px;
+.timeline-point .circle {
+  width: 14px;
+  height: 14px;
   background-color: #4e8b5b;
   border-radius: 50%;
-  margin: 0 auto 10px auto;
+  margin: 0 auto 12px auto;
+  position: relative;
+  top: -6px;
 }
 
-.timeline-item .role {
+.timeline-point .role {
   font-weight: 600;
   margin: 0;
+  font-size: 0.95rem;
 }
 
-.timeline-item .company {
+.timeline-point .company {
   font-style: italic;
   color: #4e8b5b;
   font-weight: normal;
+  display: block;
+  margin-top: 2px;
 }
 
-.timeline-item .year {
-  font-size: 0.9rem;
+.timeline-point .year {
+  font-size: 0.85rem;
   color: #777;
-  margin-top: 5px;
-}
-
-/* Optional fade-in animation */
-.fade-in {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+  margin-top: 6px;
 }
