@@ -144,9 +144,6 @@ body {
   box-sizing: border-box;
   min-height: 100vh;
   padding: 40px 80px;
-  display: flex;
-  justify-content: center;     /* vertical center */
-  align-items: flex-start;     /* horizontal left align */
 }
 
 .tab-content.active-tab {
