@@ -98,8 +98,7 @@ body {
   pointer-events: none;
 }
 
-.home-content {
-  z-index: 1;
+#home .home-content {
   text-align: center;
   max-width: 800px;
   padding: 2rem;
