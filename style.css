@@ -61,6 +61,18 @@ body {
   color: #000;
 }
 
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transform: rotate(90deg);
+  transform-origin: center;
+  z-index: -1;
+}
+
 .main-content {
   flex: 1;
   padding: 0;
@@ -103,8 +115,22 @@ body {
 }
 
 .home-content {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.intro-text {
   text-align: center;
-  animation: fadeInUp 1s ease;
+  max-width: 800px;
+  font-size: 1.2rem;
+  animation: fadeIn 1.5s ease;
 }
 
 /* All tabs default */
@@ -125,6 +151,13 @@ body {
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   margin-top: 0;
+}
+
+#home h1 {
+  font-size: 2.5rem;
+  color: #14532d;
+  margin-bottom: 1rem;
+  font-weight: 700;
 }
 
 h1 {
