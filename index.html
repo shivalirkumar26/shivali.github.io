@@ -2,114 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Shivali Ravindra Kumar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shivali Ravindra Kumar – Home</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container">
-    <div class="sidebar">
-      <img src="photo.jpg" alt="Shivali Ravindra Kumar">
+    <aside class="sidebar">
       <nav>
         <ul>
-          <li><a href="#home" class="nav-link active" onclick="showTab('home')">ABOUT</a></li>
-          <li><a href="#timeline" class="nav-link" onclick="showTab('timeline')">TIMELINE</a></li>
-          <li><a href="#projects" class="nav-link" onclick="showTab('projects')">PROJECTS</a></li>
-          <li><a href="#resume" class="nav-link" onclick="showTab('resume')">RESUME</a></li>
+          <li><a href="#" class="active">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#timeline">TIMELINE</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#resume">RESUME</a></li>
         </ul>
       </nav>
-    </div>
-    <div class="main-content">
-      <section id="home" class="tab-content content">
-        <h1>Shivali Ravindra Kumar</h1>
-        <h3>Senior Data Analyst</h3>
-        <p>
-          📍 Esslingen am Neckar, Germany<br>
-          📞 +49 172 8768128<br>
-          ✉️ <a href="mailto:shivali.ravindrakumar@gmail.com">shivali.ravindrakumar@gmail.com</a>
-        </p>
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/in/shivalirkumar" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
-          <a href="https://github.com/shivalirkumar26" target="_blank" aria-label="GitHub"><i class="fab fa-github fa-2x"></i></a>
+    </aside>
+
+    <main class="home-section">
+      <div class="intro-wrapper">
+        <img src="photo.jpg" alt="Shivali Ravindra Kumar" class="intro-photo">
+        <div class="intro-text">
+          <h1>Welcome!</h1>
+          <p>I’m Shivali, a data professional with a curious mind and a love for meaningful work.</p>
+          <p>Over the last four years, I’ve worked on turning numbers into narratives — helping teams make informed, confident decisions.</p>
+          <p>Beyond analytics, I enjoy building tools, streamlining workflows, and solving real problems with simple, elegant solutions.</p>
+          <p>This portfolio brings together my experiences, projects, and a glimpse into how I think.</p>
         </div>
-        <p>
-          I am a passionate data analyst with a strong background in statistical analysis and data visualization.
-          I love turning data into actionable insights that drive strategic decision-making.
-        </p>
-      </section>
-
-<section id="timeline" class="tab-content content" style="display: none;">
-  <h2>Career Timeline</h2>
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-date">Nov 2020 – Jun 2022</div>
-      <div class="timeline-content">Power BI Associate Data Analyst, Accenture India</div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-date">Jul 2022 – Jun 2024</div>
-      <div class="timeline-content">Power BI Data Analyst, Accenture India</div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-date">Jul 2024 – Nov 2024</div>
-      <div class="timeline-content">Senior Data Analyst, Accenture India</div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-date">Nov 2024</div>
-      <div class="timeline-content">Moved to Germany after marriage</div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-date">2025</div>
-      <div class="timeline-content">Google Data Analytics Certificate</div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-date">2025</div>
-      <div class="timeline-content">Microsoft PL-300 & PL-900 Certifications</div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-date">2025</div>
-      <div class="timeline-content">Microsoft Fabric Bootcamp & Azure Data Services</div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-date">2025</div>
-      <div class="timeline-content">RPA using Power Automate Desktop</div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-date">Oct 2025</div>
-      <div class="timeline-content">Begin Master's in Business Intelligence</div>
-    </div>
+      </div>
+    </main>
   </div>
-</section>
-      
-      <section id="projects" class="tab-content content" style="display: none;">
-        <h2>Projects</h2>
-        <ul>
-          <li><strong>Sales Dashboard</strong> – Built using Power BI to visualize regional trends and monthly performance.</li>
-          <li><strong>Churn Analysis</strong> – Conducted SQL + Python-based exploratory data analysis on customer behavior.</li>
-          <li><strong>Google Capstone Project</strong> – Wrangled bike-share data and communicated trends via visualization.</li>
-        </ul>
-      </section>
-
-      <section id="resume" class="tab-content content" style="display: none;">
-        <h2>Resume</h2>
-        <p><a href="Shivali_Ravindra_Kumar_Resume.pdf" target="_blank">Download My Resume (PDF)</a></p>
-      </section>
-    </div>
-  </div>
-
-  <script>
-    function showTab(tabId) {
-      const tabs = document.querySelectorAll(".tab-content");
-      tabs.forEach(tab => tab.style.display = "none");
-
-      document.getElementById(tabId).style.display = "block";
-
-      const links = document.querySelectorAll(".nav-link");
-      links.forEach(link => link.classList.remove("active"));
-
-      const activeLink = Array.from(links).find(link => link.getAttribute("href") === "#" + tabId);
-      if (activeLink) activeLink.classList.add("active");
-    }
-  </script>
 </body>
 </html>
