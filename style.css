@@ -230,12 +230,13 @@ h3 {
 /* Timeline Styles */
 .timeline {
   position: relative;
-  width: 90vw; /* fill more of the viewport width */
+  width: 100%;
+  max-width: 1100px; /* ensures it fits inside container */
   margin: 60px auto 0 auto;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* still 5 points */
-  gap: 80px; /* more horizontal spacing between each point */
-  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 40px; /* adds room on left and right */
 }
 
 .timeline-line {
@@ -250,8 +251,10 @@ h3 {
 
 .timeline-point {
   position: relative;
+  width: 18%; /* reduced width to give breathing room */
   text-align: center;
   z-index: 2;
+  font-size: 1rem;
 }
 
 .circle {
