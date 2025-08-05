@@ -233,7 +233,7 @@ h3 {
   width: 100%;
   max-width: 100%;
   margin: 80px auto 40px;
-  padding: 20px 0 0;
+  padding: 20px 40px 0; /* Added left & right padding */
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -241,9 +241,9 @@ h3 {
 
 .timeline-line {
   position: absolute;
-  top: 25px; /* This allows circles to sit over the line */
-  left: 0;
-  right: 0;
+  top: 25px;
+  left: 40px;     /* Matches left padding */
+  right: 40px;    /* Matches right padding */
   height: 2px;
   background-color: #4e8b5b;
   z-index: 0;
@@ -252,8 +252,18 @@ h3 {
 .timeline-point {
   position: relative;
   text-align: center;
-  width: 20%;
   z-index: 1;
+  flex: 1;
+}
+
+.timeline-point:first-child {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.timeline-point:last-child {
+  align-items: flex-end;
+  text-align: right;
 }
 
 .timeline-point .circle {
@@ -263,7 +273,7 @@ h3 {
   border-radius: 50%;
   margin: 0 auto;
   position: relative;
-  top: 18px; /* This places it on top of the line */
+  top: 18px;
 }
 
 .timeline-point .role {
@@ -285,4 +295,22 @@ h3 {
   font-size: 0.85rem;
   color: #777;
   margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  .timeline-line {
+    display: none; /* Or make it vertical if you want */
+  }
+
+  .timeline-point {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
 }
