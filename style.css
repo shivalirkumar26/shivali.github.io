@@ -1,4 +1,4 @@
-/* Reset and Base */
+/* ========== RESET & BASE ========== */
 body {
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
@@ -12,7 +12,7 @@ body {
   overflow: hidden;
 }
 
-/* Sidebar */
+/* ========== SIDEBAR ========== */
 .sidebar {
   width: 260px;
   background-color: #6b9e83;
@@ -31,7 +31,7 @@ body {
   width: 130px;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
   border: 4px solid #446644;
 }
@@ -65,14 +65,14 @@ body {
   color: #000;
 }
 
-/* Main Content Area */
+/* ========== MAIN CONTENT ========== */
 .main-content {
   flex: 1;
   position: relative;
   overflow: hidden;
 }
 
-/* Home Section Styling */
+/* ========== HOME SECTION ========== */
 #home {
   width: 100%;
   height: 100vh;
@@ -82,7 +82,6 @@ body {
   align-items: center;
 }
 
-/* Background Image as a Layer */
 #home::before {
   content: "";
   position: absolute;
@@ -99,7 +98,6 @@ body {
   pointer-events: none;
 }
 
-/* Home Text */
 .home-content {
   z-index: 1;
   text-align: center;
@@ -122,162 +120,42 @@ body {
   line-height: 1.6;
 }
 
-/* Other Tabs */
-/* Base tab content styling: centered container but left-aligned text */
+/* ========== TABS GENERAL ========== */
 .tab-content {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* left align content */
-  justify-content: center; /* vertical centering */
+  justify-content: center;      /* horizontally center .content-wrapper */
+  align-items: center;          /* vertically center */
   min-height: 100vh;
-  padding: 60px 80px;
+  padding: 40px;
   box-sizing: border-box;
   background-color: #edf6ec;
+  text-align: left;
 }
 
-/* Make it expand when there is more content */
-.tab-content > * {
-  width: 100%;
-  max-width: 800px;
-}
-
-/* Home tab should remain center aligned */
-#home .home-content {
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-
-.tab-content:target {
-  display: block;
-}
-
+.tab-content:target,
 .tab-content:first-of-type {
-  display: block;
-}
-
-.tab-content p {
-  text-align: justify;
-}
-
-h3 {
-  color: #446644;
-  margin-bottom: 20px;
-}
-
-/* Social Icons */
-.social-icons {
-  margin-top: 10px;
-}
-
-.social-icons a {
-  margin: 0 10px;
-  color: #2d4831;
-  transition: color 0.2s;
-}
-
-.social-icons a:hover {
-  color: #4f6e57;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ABOUT TAB STYLES */
-
-#about {
-  padding: 60px 40px;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  font-size: 1.1rem;
 }
 
-.about-header h1 {
-  font-size: 2.2rem;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-  font-weight: bold;
+.content-wrapper {
+  max-width: 800px;
+  width: 100%;
 }
 
-.highlight {
-  color: #14532d; /* same green as 'WELCOME' */
+.content-wrapper p {
+  text-align: left;
 }
 
-.contact-info p {
-  margin: 10px 0;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-}
-
-.contact-info i {
-  margin-right: 12px;
-  color: #14532d; /* green for icons */
-  font-size: 1.2rem;
-}
-
-.contact-info a {
-  color: #14532d;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.contact-info a:hover {
-  text-decoration: underline;
-}
-
-/* Social Icons Section */
-.about-social {
-  margin-top: 30px;
-}
-
-.about-social a {
-  margin-right: 15px;
-  color: #333; /* default: dark gray */
-  transition: color 0.3s ease;
-}
-
-.about-social a:hover {
-  color: #14532d; /* green on hover */
-}
-
-/* Optional: Fine-tune the layout for different screens */
-@media (max-width: 768px) {
-  #about {
-    padding: 40px 20px;
-    align-items: center;
-    text-align: center;
-  }
-
-  .contact-info, .about-header {
-    align-items: center;
-  }
-
-  .contact-info p {
-    justify-content: center;
-  }
-}
-
-/* ABOUT TAB STYLING */
+/* ========== ABOUT SECTION ========== */
 #about {
-  padding: 80px;
   font-size: 1.1rem;
 }
 
 #about h1 {
   font-size: 2.2rem;
   margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .highlight {
@@ -304,7 +182,7 @@ h3 {
 }
 
 .about-icons a {
-  font-size: 2rem; /* slightly larger */
+  font-size: 2rem;
   margin-right: 20px;
   color: #444;
   transition: color 0.3s ease;
@@ -314,24 +192,50 @@ h3 {
   color: #4e8b5b;
 }
 
-/* Common Wrapper to center all tab content vertically and horizontally */
-.tab-content {
-  display: flex;
-  justify-content: center;     /* horizontal center of wrapper */
-  align-items: center;         /* vertical center of wrapper */
-  min-height: 100vh;
-  padding: 40px;
-  box-sizing: border-box;
-  background-color: #edf6ec;
-  text-align: left;
+/* ========== OTHER STYLES ========== */
+h3 {
+  color: #446644;
+  margin-bottom: 20px;
 }
 
-.content-wrapper {
-  max-width: 800px;
-  width: 100%;
+.social-icons {
+  margin-top: 10px;
 }
 
-/* Make paragraphs justified if needed */
-.content-wrapper p {
-  text-align: left;
+.social-icons a {
+  margin: 0 10px;
+  color: #2d4831;
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: #4f6e57;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .tab-content {
+    padding: 40px 20px;
+  }
+
+  .content-wrapper {
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-icons a {
+    font-size: 1.6rem;
+  }
 }
