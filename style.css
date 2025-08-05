@@ -148,7 +148,19 @@ body {
 
 /* ========== ABOUT SECTION ========== */
 #about {
+  display: flex;
+  align-items: center;          /* Vertical centering */
+  justify-content: flex-start;  /* Left alignment */
+  min-height: 100vh;
+  padding: 0 80px;
+  background-color: #edf6ec;
+  box-sizing: border-box;
   font-size: 1.1rem;
+}
+
+#about .content-wrapper {
+  max-width: 800px;
+  width: 100%;
 }
 
 #about h1 {
@@ -162,6 +174,11 @@ body {
   color: #4e8b5b;
 }
 
+.icon-green {
+  color: #4e8b5b;
+  margin-right: 10px;
+}
+
 .email-green {
   color: #4e8b5b;
   font-weight: 600;
@@ -172,17 +189,13 @@ body {
   text-decoration: underline;
 }
 
-.icon-green {
-  color: #4e8b5b;
-  margin-right: 10px;
-}
-
+/* About Page Social Icons */
 .about-icons {
   margin-top: 30px;
 }
 
 .about-icons a {
-  font-size: 2rem;
+  font-size: 2.5rem; /* Increased size */
   margin-right: 20px;
   color: #444;
   transition: color 0.3s ease;
