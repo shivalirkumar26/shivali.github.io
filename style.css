@@ -137,6 +137,23 @@ body {
   display: flex;
 } */
 
+/* ========== TABS GENERAL ========== */
+.tab-content {
+  display: none;
+  background-color: #edf6ec;
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 40px 80px;
+}
+
+/* Activate visible tab */
+.tab-content.active-tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: flex-start; /* left-align */
+}
+
 /* ========== ABOUT SECTION ========== */
 /* About Section – vertically center, left-aligned */
 #about {
