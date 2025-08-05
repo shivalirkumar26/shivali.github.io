@@ -156,6 +156,10 @@ body {
   display: block;
 }
 
+.tab-content p {
+  text-align: justify;
+}
+
 h3 {
   color: #446644;
   margin-bottom: 20px;
