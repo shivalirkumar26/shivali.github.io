@@ -148,21 +148,19 @@ body {
 
 /* ========== ABOUT SECTION ========== */
 #about {
-  height: 100vh;
   display: flex;
-  justify-content: center;       /* vertically center */
-  align-items: flex-start;       /* left-align content */
+  justify-content: flex-start;   /* horizontal - left align */
+  align-items: center;           /* vertical - center */
+  height: 100vh;
   padding-left: 80px;
   padding-right: 80px;
-  box-sizing: border-box;
   background-color: #edf6ec;
-  font-size: 1.1rem;
-  flex-direction: column;
+  box-sizing: border-box;
 }
 
-#about .content-wrapper {
-  width: 100%;
+.about-wrapper {
   max-width: 800px;
+  width: 100%;
 }
 
 #about h1 {
