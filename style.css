@@ -231,19 +231,19 @@ h3 {
 .timeline {
   position: relative;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 60px auto 0 auto;
-  display: flex;
-  justify-content: space-around; /* <-- changed from space-between */
-  align-items: flex-start;
-  padding: 0 40px; /* <-- increased horizontal padding */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 points = 5 columns */
+  gap: 60px; /* horizontal spacing */
+  padding: 0 40px;
 }
 
 .timeline-line {
   position: absolute;
   top: 18px;
-  left: 40px;   /* match padding */
-  right: 40px;  /* match padding */
+  left: 40px;
+  right: 40px;
   height: 3px;
   background-color: #4e8b5b;
   z-index: 1;
@@ -251,8 +251,6 @@ h3 {
 
 .timeline-point {
   position: relative;
-  flex: 1;              /* <-- flexible equal spacing */
-  max-width: 180px;     /* <-- optional: limit item width */
   text-align: center;
   z-index: 2;
 }
