@@ -231,12 +231,11 @@ h3 {
 .timeline {
   position: relative;
   width: 100%;
-  max-width: 1100px; /* ensures it fits inside container */
+  max-width: 1100px;
   margin: 60px auto 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly; /* key: even horizontal spacing */
   align-items: flex-start;
-  padding: 0 40px; /* adds room on left and right */
 }
 
 .timeline-line {
@@ -251,20 +250,20 @@ h3 {
 
 .timeline-point {
   position: relative;
-  width: 18%; /* reduced width to give breathing room */
   text-align: center;
   z-index: 2;
-  font-size: 1rem;
+  max-width: 200px; /* fixed width to control wrapping */
 }
 
 .circle {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   background-color: #4e8b5b;
   border-radius: 50%;
-  margin: 0 auto;
-  position: relative;
-  top: 10px; /* pulls circle down to overlap line */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .timeline-point .role {
