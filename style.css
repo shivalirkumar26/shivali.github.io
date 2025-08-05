@@ -304,12 +304,34 @@ h3 {
 }
 
 .about-icons a {
+  font-size: 2rem; /* slightly larger */
   margin-right: 20px;
-  font-size: 1.8rem;
-  color: #444; /* dark gray/black by default */
+  color: #444;
   transition: color 0.3s ease;
 }
 
 .about-icons a:hover {
   color: #4e8b5b;
+}
+
+/* Common Wrapper to center all tab content vertically and horizontally */
+.tab-content {
+  display: flex;
+  justify-content: center;     /* horizontal center of wrapper */
+  align-items: center;         /* vertical center of wrapper */
+  min-height: 100vh;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: #edf6ec;
+  text-align: left;
+}
+
+.content-wrapper {
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Make paragraphs justified if needed */
+.content-wrapper p {
+  text-align: left;
 }
