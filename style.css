@@ -230,17 +230,18 @@ h3 {
 /* Timeline Styles */
 .timeline {
   position: relative;
-  width: 90%;
+  width: 100%;
+  max-width: 1000px;
   margin: 60px auto 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: nowrap;
+  padding: 0 20px;
 }
 
 .timeline-line {
   position: absolute;
-  top: 28px; /* match circle center */
+  top: 18px; /* aligns line with circle center */
   left: 0;
   right: 0;
   height: 3px;
@@ -250,8 +251,9 @@ h3 {
 
 .timeline-point {
   position: relative;
+  width: 18%;
   text-align: center;
-  flex: 1;
+  z-index: 2;
 }
 
 .circle {
@@ -261,12 +263,13 @@ h3 {
   border-radius: 50%;
   margin: 0 auto;
   position: relative;
-  z-index: 2;
+  top: 10px; /* pulls circle down to overlap line */
 }
 
 .timeline-point .role {
-  margin-top: 20px;
+  margin-top: 25px;
   font-weight: 600;
+  line-height: 1.3;
 }
 
 .timeline-point .company {
