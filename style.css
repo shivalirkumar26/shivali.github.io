@@ -230,18 +230,17 @@ h3 {
 /* Timeline Styles */
 .timeline {
   position: relative;
+  width: 90%;
+  margin: 60px auto 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding-top: 40px;
-  width: 100%;
-  max-width: 1000px;
-  margin: 60px auto 0 auto;
+  flex-wrap: nowrap;
 }
 
 .timeline-line {
   position: absolute;
-  top: 35px; /* height of the circle */
+  top: 28px; /* match circle center */
   left: 0;
   right: 0;
   height: 3px;
@@ -250,9 +249,8 @@ h3 {
 }
 
 .timeline-point {
-  text-align: center;
   position: relative;
-  z-index: 2;
+  text-align: center;
   flex: 1;
 }
 
@@ -261,38 +259,23 @@ h3 {
   height: 16px;
   background-color: #4e8b5b;
   border-radius: 50%;
-  margin: 0 auto 15px auto;
-  position: relative;
-  top: -25px; /* moves it up to overlap the line */
-}
-
-.timeline-point .circle {
-  width: 16px;
-  height: 16px;
-  background-color: #4e8b5b;
-  border-radius: 50%;
   margin: 0 auto;
   position: relative;
-  top: 24px;
+  z-index: 2;
 }
 
 .timeline-point .role {
+  margin-top: 20px;
   font-weight: 600;
-  margin-top: 40px;
-  font-size: 0.95rem;
 }
 
 .timeline-point .company {
   font-style: italic;
   color: #4e8b5b;
-  font-weight: normal;
-  font-size: 0.9rem;
-  display: block;
-  margin-top: 4px;
 }
 
 .timeline-point .year {
-  font-size: 0.85rem;
-  color: #777;
   margin-top: 6px;
+  color: gray;
+  font-size: 0.9rem;
 }
