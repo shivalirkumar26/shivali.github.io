@@ -94,10 +94,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  transform: rotate(90deg);
-  transform-origin: center;
   z-index: 0;
-  opacity: 0.25; /* Controls overlay fade effect */
+  opacity: 0.25;
   pointer-events: none;
 }
 
