@@ -280,3 +280,7 @@ h3 {
   color: #888;
   margin-top: 8px;
 }
+
+.timeline {
+  margin-top: 40px; /* Increase spacing if needed */
+}
