@@ -226,3 +226,57 @@ h3 {
     font-size: 1.6rem;
   }
 }
+
+/* Timeline Styles */
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 60px;
+  position: relative;
+  border-top: 2px solid #4e8b5b;
+  padding-top: 40px;
+  flex-wrap: wrap;
+}
+
+.timeline-item {
+  position: relative;
+  text-align: center;
+  flex: 1;
+  padding: 0 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-item .circle {
+  width: 12px;
+  height: 12px;
+  background-color: #4e8b5b;
+  border-radius: 50%;
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item .role {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.timeline-item .company {
+  font-style: italic;
+  color: #446644;
+}
+
+.timeline-item .year {
+  font-size: 14px;
+  color: #888;
+  margin-top: 8px;
+}
