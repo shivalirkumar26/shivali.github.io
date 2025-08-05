@@ -120,7 +120,7 @@ body {
   line-height: 1.6;
 }
 
-/* ========== TABS GENERAL ========== */
+/* ========== TABS GENERAL ========== 
 .tab-content {
   display: none;
   background-color: #edf6ec;
@@ -135,7 +135,7 @@ body {
 .tab-content:target,
 .tab-content:first-of-type {
   display: flex;
-}
+} */
 
 /* ========== ABOUT SECTION ========== */
 /* About Section – vertically center, left-aligned */
