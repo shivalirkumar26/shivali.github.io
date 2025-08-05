@@ -138,10 +138,15 @@ body {
 }
 
 /* ========== ABOUT SECTION ========== */
+/* About Section – vertically center, left-aligned */
 #about {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: flex-start;   /* horizontal: left */
+  align-items: center;           /* vertical: center */
+  min-height: 100vh;
+  padding: 60px 80px;
+  background-color: #edf6ec;
+  box-sizing: border-box;
 }
 
 .about-wrapper {
