@@ -234,16 +234,16 @@ h3 {
   max-width: 1000px;
   margin: 60px auto 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around; /* <-- changed from space-between */
   align-items: flex-start;
-  padding: 0 20px;
+  padding: 0 40px; /* <-- increased horizontal padding */
 }
 
 .timeline-line {
   position: absolute;
-  top: 18px; /* aligns line with circle center */
-  left: 0;
-  right: 0;
+  top: 18px;
+  left: 40px;   /* match padding */
+  right: 40px;  /* match padding */
   height: 3px;
   background-color: #4e8b5b;
   z-index: 1;
@@ -251,7 +251,8 @@ h3 {
 
 .timeline-point {
   position: relative;
-  width: 24%;
+  flex: 1;              /* <-- flexible equal spacing */
+  max-width: 180px;     /* <-- optional: limit item width */
   text-align: center;
   z-index: 2;
 }
