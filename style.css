@@ -122,14 +122,14 @@ body {
 
 /* ========== TABS GENERAL ========== */
 .tab-content {
-  display: flex;
-  justify-content: center;      /* horizontally center .content-wrapper */
-  align-items: center;          /* vertically center */
-  min-height: 100vh;
-  padding: 40px;
-  box-sizing: border-box;
+  display: none;
   background-color: #edf6ec;
-  text-align: left;
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 40px 80px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .tab-content:target,
@@ -137,25 +137,11 @@ body {
   display: flex;
 }
 
-.content-wrapper {
-  max-width: 800px;
-  width: 100%;
-}
-
-.content-wrapper p {
-  text-align: left;
-}
-
 /* ========== ABOUT SECTION ========== */
 #about {
   display: flex;
-  justify-content: flex-start;   /* horizontal - left align */
-  align-items: center;           /* vertical - center */
-  height: 100vh;
-  padding-left: 80px;
-  padding-right: 80px;
-  background-color: #edf6ec;
-  box-sizing: border-box;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .about-wrapper {
@@ -189,13 +175,12 @@ body {
   text-decoration: underline;
 }
 
-/* About Page Social Icons */
 .about-icons {
   margin-top: 30px;
 }
 
 .about-icons a {
-  font-size: 2.5rem; /* Increased size */
+  font-size: 2.5rem;
   margin-right: 20px;
   color: #444;
   transition: color 0.3s ease;
@@ -205,7 +190,7 @@ body {
   color: #4e8b5b;
 }
 
-/* ========== OTHER STYLES ========== */
+/* ========== GLOBAL ELEMENT STYLES ========== */
 h3 {
   color: #446644;
   margin-bottom: 20px;
@@ -225,7 +210,6 @@ h3 {
   color: #4f6e57;
 }
 
-/* ========== ANIMATIONS ========== */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -241,9 +225,6 @@ h3 {
 @media (max-width: 768px) {
   .tab-content {
     padding: 40px 20px;
-  }
-
-  .content-wrapper {
     align-items: center;
     text-align: center;
   }
