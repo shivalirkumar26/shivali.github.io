@@ -248,3 +248,48 @@ h3 {
     justify-content: center;
   }
 }
+
+/* ABOUT TAB STYLING */
+#about {
+  padding: 80px;
+  font-size: 1.1rem;
+}
+
+#about h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #4e8b5b;
+}
+
+.email-green {
+  color: #4e8b5b;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.email-green:hover {
+  text-decoration: underline;
+}
+
+.icon-green {
+  color: #4e8b5b;
+  margin-right: 10px;
+}
+
+.about-icons {
+  margin-top: 30px;
+}
+
+.about-icons a {
+  margin-right: 20px;
+  font-size: 1.8rem;
+  color: #444; /* dark gray/black by default */
+  transition: color 0.3s ease;
+}
+
+.about-icons a:hover {
+  color: #4e8b5b;
+}
