@@ -123,27 +123,26 @@
 
   <script>
     function showTab(tabId) {
-      const tabs = document.querySelectorAll(".tab-content");
-      tabs.forEach(tab => tab.style.display = "none");
+  const tabs = document.querySelectorAll(".tab-content");
+  tabs.forEach(tab => tab.style.display = "none");
 
-      const activeTab = document.getElementById(tabId);
-      activeTab.style.display = "block";
+  const activeTab = document.getElementById(tabId);
+  activeTab.style.display = "flex";  // <-- THIS is key
 
-      const links = document.querySelectorAll(".nav-link");
-      links.forEach(link => link.classList.remove("active"));
+  const links = document.querySelectorAll(".nav-link");
+  links.forEach(link => link.classList.remove("active"));
 
-      const activeLink = Array.from(links).find(link => link.getAttribute("href") === "#" + tabId);
-      if (activeLink) activeLink.classList.add("active");
+  const activeLink = Array.from(links).find(link => link.getAttribute("href") === "#" + tabId);
+  if (activeLink) activeLink.classList.add("active");
 
-      // 🔧 Fix: Reapply flex centering for Home tab
-      if (tabId === "home") {
-        setTimeout(() => {
-          activeTab.style.display = "flex";
-          activeTab.style.justifyContent = "center";
-          activeTab.style.alignItems = "center";
-        }, 50);
-      }
-    }
+  if (tabId === "home") {
+    setTimeout(() => {
+      activeTab.style.display = "flex";
+      activeTab.style.justifyContent = "center";
+      activeTab.style.alignItems = "center";
+    }, 50);
+  }
+}
   </script>
 </body>
 </html>
