@@ -73,5 +73,28 @@
       }
     }
   </script>
+  <script>
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href').substring(1);
+
+      // Hide all tabs
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.style.display = 'none';
+      });
+
+      // Show selected tab
+      const targetTab = document.getElementById(targetId);
+      if (targetTab) {
+        targetTab.style.display = 'block';
+      }
+
+      // Update active link
+      document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+</script>
 </body>
 </html>
