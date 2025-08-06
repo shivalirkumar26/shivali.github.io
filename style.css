@@ -75,7 +75,6 @@ body {
 }
 
 .sidebar .contact-icons a {
-  font-size: 2rem !important; /* force it */
   color: #083c27;
   transition: color 0.3s ease;
 }
