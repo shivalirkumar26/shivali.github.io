@@ -56,13 +56,25 @@ body {
   display: inline-block;
   padding: 8px 12px;
   border-radius: 5px;
-  transition: background 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  position: relative;
 }
 
-.sidebar a.active,
-.sidebar a:hover {
-  background-color: #c2dacd;
-  color: #000;
+.sidebar a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: #083c27;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: 4px;
+  left: 12px;
+}
+
+.sidebar a:hover::after,
+.sidebar a.active::after {
+  width: calc(100% - 24px);
 }
 
 /* ========== MAIN CONTENT ========== */
@@ -258,6 +270,11 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.2;
+}
+
+.timeline-entry::before:hover {
+  background-color: #2c5f3a;
+  cursor: pointer;
 }
 
 /* Badges */
