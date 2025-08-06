@@ -74,16 +74,16 @@ body {
   margin-top: 30px;
 }
 
-.sidebar .contact-icons a {
+.sidebar .sidebar-contact-icons a {
   color: #083c27;
   transition: color 0.3s ease;
 }
 
-.sidebar .contact-icons a i {
-  font-size: 2.5rem; /* Increase to desired size */
+.sidebar .sidebar-contact-icons a i {
+  font-size: 2.5rem;
 }
 
-.sidebar .contact-icons a:hover {
+.sidebar .sidebar-contact-icons a:hover {
   color: #a5d6af; /* subtle pastel green on hover */
 }
 
