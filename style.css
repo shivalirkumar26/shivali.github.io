@@ -220,7 +220,7 @@ body {
   content: '';
   position: absolute;
   top: 6px;         /* Adjust this to align vertically with text */
-  left: -17px;      /* This value ensures perfect overlap with the 3px border */
+  left: -10px;      /* This value ensures perfect overlap with the 3px border */
   width: 14px;
   height: 14px;
   background-color: #4e8b5b;
