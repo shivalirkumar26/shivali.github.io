@@ -214,7 +214,7 @@ body {
 .timeline-entry {
   position: relative;
   padding-left: 20px;
-  margin-bottom: 18px; /* Adjust this value as needed */
+  margin-bottom: 26px; /* Adjust this value as needed */
 }
 
 .timeline-entry::before {
