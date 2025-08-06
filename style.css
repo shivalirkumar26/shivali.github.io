@@ -144,15 +144,18 @@ body {
   max-width: 1200px;
   width: 100%;
   margin: 5vh auto 0 auto;
+  flex-wrap: wrap;
 }
 
 .about-left {
   flex: 1;
+  min-width: 300px;
   max-width: 55%;
 }
 
 .about-right {
   flex: 1;
+  min-width: 280px;
   max-width: 45%;
 }
 
@@ -203,29 +206,45 @@ body {
   text-align: justify;
 }
 
+/* Timeline on Right */
 .vertical-timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  padding-left: 20px;
+  position: relative;
   border-left: 3px solid #4e8b5b;
-  margin-top: 40px;
+  padding-left: 20px;
+  margin-top: 20px;
 }
 
 .timeline-entry {
   position: relative;
-  padding-left: 20px;
+  margin-bottom: 30px;
 }
 
 .timeline-entry::before {
   content: '';
   position: absolute;
-  left: -10px;
-  top: 6px;
-  width: 12px;
-  height: 12px;
+  left: -11px;
+  top: 4px;
+  width: 14px;
+  height: 14px;
   background-color: #4e8b5b;
   border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-entry .role {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.timeline-entry .company {
+  font-style: italic;
+  color: #4e8b5b;
+  margin-bottom: 2px;
+}
+
+.timeline-entry .year {
+  font-size: 0.9rem;
+  color: gray;
 }
 
 .cert-badges {
