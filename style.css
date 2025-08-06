@@ -229,7 +229,7 @@ body {
   content: '';
   position: absolute;
   top: 1.6em;         /* adjusts vertical alignment slightly */
-  left: -38.5px;        /* updated value for perfect horizontal alignment */
+  left: -28.5px;        /* updated value for perfect horizontal alignment */
   width: 14px;
   height: 14px;
   background-color: #4e8b5b;
