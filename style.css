@@ -80,6 +80,10 @@ body {
   transition: color 0.3s ease;
 }
 
+.sidebar .contact-icons a i {
+  font-size: 2.5rem; /* Increase to desired size */
+}
+
 .sidebar .contact-icons a:hover {
   color: #a5d6af; /* subtle pastel green on hover */
 }
