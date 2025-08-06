@@ -272,8 +272,10 @@ body {
   line-height: 1.2;
 }
 
-.timeline-entry::before:hover {
+.timeline-entry:hover::before {
   background-color: #2c5f3a;
+  transform: scale(1.2);
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
