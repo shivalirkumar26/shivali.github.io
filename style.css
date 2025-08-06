@@ -214,13 +214,14 @@ body {
 .timeline-entry {
   position: relative;
   padding-left: 20px;
-  margin-bottom: 26px; /* Adjust this value as needed */
+  padding-top: 1.6em; /* same as circle's top value */
+  margin-bottom: 18px; /* Adjust this value as needed */
 }
 
 .timeline-entry::before {
   content: '';
   position: absolute;
-  top: 0.4em;         /* adjusts vertical alignment slightly */
+  top: 1.6em;         /* adjusts vertical alignment slightly */
   left: -38.5px;        /* updated value for perfect horizontal alignment */
   width: 14px;
   height: 14px;
