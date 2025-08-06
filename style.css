@@ -256,10 +256,10 @@ body {
 /* Badges */
 .cert-badges {
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   gap: 40px;
-  margin: 60px auto 0 auto;
+  margin: -290px auto 0 auto;
   flex-wrap: wrap;
   max-width: 1000px;
 }
