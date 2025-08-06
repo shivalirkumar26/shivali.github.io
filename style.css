@@ -230,19 +230,25 @@ body {
 
 .timeline-entry .role {
   font-weight: bold;
-  margin-bottom: 0; /* tighter spacing */
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
 }
 
 .timeline-entry .company {
   font-style: italic;
   color: #4e8b5b;
-  margin-bottom: 1px; /* even tighter spacing */
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
 }
 
 .timeline-entry .year {
   font-size: 0.85rem;
   color: gray;
-  margin-top: 0; /* removes gap above */
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
 }
 
 /* Badges */
