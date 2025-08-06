@@ -222,8 +222,8 @@ body {
 .timeline-entry::before {
   content: '';
   position: absolute;
-  left: -11px;
-  top: 5px;
+  left: -11px;       /* aligns with border-left: 3px */
+  top: 6px;
   width: 14px;
   height: 14px;
   background-color: #4e8b5b;
