@@ -345,8 +345,8 @@ h3 {
 }
 
 .cert-badges-honeycomb img {
-  width: 120px;
-  height: 110px;
+  width: 130px;
+  height: 120px;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
