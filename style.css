@@ -230,7 +230,7 @@ body {
 
 .timeline-entry .role {
   font-weight: bold;
-  margin-bottom: 2px; /* tighter spacing */
+  margin-bottom: 0; /* tighter spacing */
 }
 
 .timeline-entry .company {
