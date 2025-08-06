@@ -363,6 +363,10 @@ h3 {
   position: relative;
 }
 
+.cert-badges-honeycomb a {
+  display: inline-block;
+}
+
 .cert-badges-honeycomb img {
   width: 130px;
   height: 120px;
@@ -370,6 +374,10 @@ h3 {
   transition: transform 0.3s ease;
 }
 
-.cert-badges-honeycomb img:nth-child(2n) {
-  margin-top: 40px; /* Offset for honeycomb effect */
+.cert-badges-honeycomb img:hover {
+  transform: scale(1.05);
+}
+
+.cert-badges-honeycomb a:nth-child(2n) {
+  margin-top: 40px; /* Offset to create honeycomb stagger */
 }
