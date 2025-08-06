@@ -62,8 +62,13 @@ body {
 
 .sidebar a.active,
 .sidebar a:hover {
-  background-color: #c2dacd;
-  color: #000;
+  text-decoration: underline;
+  background-color: transparent;
+  color: #083c27;
+}
+
+.sidebar .contact-icons a {
+  font-size: 1.8rem; /* or 2rem if you want it bigger */
 }
 
 /* ========== MAIN CONTENT ========== */
