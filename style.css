@@ -205,10 +205,17 @@ body {
 
 /* Timeline on Right */
 .vertical-timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.timeline-wrapper {
   position: relative;
   border-left: 3px solid #4e8b5b;
-  padding-left: 30px;  /* Slightly more spacing for text alignment */
-  margin-top: 20px;
+  padding-left: 20px;
+  margin-bottom: 40px;
 }
 
 .timeline-entry {
